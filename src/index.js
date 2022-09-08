@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css"
+import dhani from './img/dhani.jpg';
+import ghr from './img/ghr.jpg';
+import frind from './img/frind.jpg';
+import going from './img/going.jpg';
+import PostCard from "./components/post";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const MainComponent = () => (
+  <>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+    <PostCard profileimg={dhani} title="SHAH NAWAZ DHANI FANS" text="Enjoying" postimg={dhani} />
+    <PostCard profileimg={dhani} title="SHAH NAWAZ DHANI FANS" text="My Ghr" postimg={ghr} />
+    <PostCard profileimg={dhani} title="SHAH NAWAZ DHANI FANS" text="My Frind" postimg={frind} />
+    <PostCard profileimg={dhani} title="SHAH NAWAZ DHANI FANS" text="Going" postimg={going} />
+
+
+
+
+
+
+
+
+
+  </>
+)
+
+ReactDOM.render(<MainComponent />, document.querySelector('#root'));
